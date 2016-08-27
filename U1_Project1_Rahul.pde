@@ -2,79 +2,74 @@
 
  */
 
+//Naming all images
+
 PImage hedgehog;
-PImage treeone;
-PImage treetwo;
-PImage treethree;
-PImage treefour;
-PImage treefive;
-PImage treesix;
-PImage treeseven;
-PImage treeeight;
-PImage treenine;
-PImage treeten;
-PImage treeeleven;
-PImage treetwelve;
+PImage tree1;
+PImage tree2;
+PImage tree3;
+PImage tree4;
+PImage tree5;
+PImage tree6;
+PImage tree7;
+PImage tree8;
+PImage tree9;
+PImage tree10;
+PImage tree11;
+PImage tree12;
 
 void setup()
 {
-  fullScreen(); // Making it a full screen
-  hedgehog = loadImage("Hedgehog.png"); // Loading a picture of a hedgehog
-  treeone = loadImage("Tree.png");
-  treetwo = loadImage("Tree.png");
-  treethree = loadImage("Tree.png");
-  treefour = loadImage("Tree.png");
-  treefive = loadImage("Tree.png");
-  treesix = loadImage("Tree.png");
-  treeseven = loadImage("Tree.png");
-  treeeight = loadImage("Tree.png");
-  treenine = loadImage("Tree.png");
-  treeten = loadImage("Tree.png");
-  treeeleven = loadImage("Tree.png");
-  treetwelve = loadImage("Tree.png");
+  fullScreen();
+  
+  // Loading all the pictures
+  hedgehog = loadImage("Hedgehog.png");
+  tree1 = loadImage("Tree.png");
+  tree2 = loadImage("Tree.png");
+  tree3 = loadImage("Tree.png");
+  tree4 = loadImage("Tree.png");
+  tree5 = loadImage("Tree.png");
+  tree6 = loadImage("Tree.png");
+  tree7 = loadImage("Tree.png");
+  tree8 = loadImage("Tree.png");
+  tree9 = loadImage("Tree.png");
+  tree10 = loadImage("Tree.png");
+  tree11 = loadImage("Tree.png");
+  tree12 = loadImage("Tree.png");
 
 }
 
 void draw() 
 {
   background(0);
-  image(hedgehog, 550, 725);
-  hedgehog.resize(300, 150);
   
-  image(treeone, 0, 0);
-  treeone.resize(450, 310);
+   // Resizing all the pictures
+   hedgehog.resize(width/5, height/6);
+   tree1.resize(width/4, height/3);
+   tree2.resize(width/4, height/3);
+   tree3.resize(width/4, height/3);
+   tree4.resize(width/4, height/3);
+   tree5.resize(width/4, height/3);
+   tree6.resize(width/4, height/3);
+   tree7.resize(width/4, height/3);
+   tree8.resize(width/4, height/3);
+   tree9.resize(width/4, height/3);
+   tree10.resize(width/4, height/3);
+   tree11.resize(width/4, height/3);
+   tree12.resize(width/4, height/3);
   
-  image(treetwo, 0, 0);
-  treetwo.resize(450, 310);
-  
-  image(treethree, 0, 0);
-  treethree.resize(450, 310);
-  
-  image(treefour, 0, 0);
-  treefour.resize(450, 310);
-  
-  image(treefive, 450, 0);
-  treefive.resize(450, 310);
-
-  image(treesix, 450, 0);
-  treesix.resize(450, 310);
-  
-  image(treeseven, 450, 0);
-  treeseven.resize(450, 310);
-  
-  image(treeeight, 450, 0);
-  treeeight.resize(450, 310);
-  
-  image(treenine, 900, 0);
-  treenine.resize(450, 310);
-  
-  image(treeten, 900, 0);
-  treeten.resize(450, 310);
-  
-  image(treeeleven, 900, 0);
-  treeeleven.resize(450, 310);
-  
-  image(treetwelve, 900, 0);
-  treetwelve.resize(450, 310);
-  
+  //Placing all the pictures
+  image(hedgehog, width/2.5, height/1.3);
+  image(tree1, width/50, height/50);
+  image(tree2, width/50, height/50);
+  image(tree3, width/50, height/50);
+  image(tree4, width/50, height/50);
+  image(tree5, width/2.7, height/50);
+  image(tree6, width/2.7, height/50);
+  image(tree7, width/2.7, height/50);
+  image(tree8, width/2.7, height/50);
+  image(tree9, width/1.4, height/50);
+  image(tree10, width/1.4, height/50);
+  image(tree11, width/1.4, height/50);
+  image(tree12, width/1.4, height/50);
 }
