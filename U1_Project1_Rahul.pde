@@ -1,48 +1,53 @@
 /*
 
+Hedgehog and Tree Screensaver by Rahul Jain
+
+This project is a screensaver that moves a tree vertically (across the y-axis) from random positions on the x axis.and a hedgehog horizontaly (across the x-axis)  
+This porject uses the translate function to move the image to its new position and draws the image.
+
  */
 
-//Naming all images
 
+// Tree variables
+PImage tree;
+float treeXPosition     = 50;
+float treeYPosition     = 10;
+int   treeXDisplacement = 0;
+int   treeYDisplacement = 2;
+
+// Hedgehog variables
 PImage hedgehog;
-
-PImage[] tree;
+float hedgehogXPosition   = 15;
+float hedgehogYPosition   = 700;
+int hedgehogXDisplacement = 3;
+int hedgehogYDisplacement = 0;
 
 void setup()
 {
   fullScreen();
-
-  tree = new PImage[12]; 
-  
-  for(int i = 0; i < 12; i++)
-    tree[i] = loadImage("Tree.png");
-  
-  
-  // Loading all the pictures
+  tree = loadImage("Tree.png");
   hedgehog = loadImage("Hedgehog.png");
-  
 }
 
 void draw() 
 {
   background(0);
   
-   // Resizing all the pictures
-   hedgehog.resize(width/5, height/6);
+  translate(treeXPosition, treeYPosition);
+  image(tree, 0, 0, 300, 300);
 
-for(int i = 0; i < 12; i++)
-    tree[i].resize(width/4, height/3);
+  translate(-treeXPosition + hedgehogXPosition + hedgehogXDisplacement, -treeYPosition + hedgehogYPosition + hedgehogYDisplacement);
+  image(hedgehog, 0, 0, 200, 100);
+
+  treeYPosition     += treeYDisplacement;
+  hedgehogXPosition += hedgehogXDisplacement;
+
+  if (treeYPosition >= height ) 
+  {
+    treeXPosition = random(0,width);
+    treeYPosition = 0;
     
-  //Placing all the pictures
-  image(hedgehog, width/2.5, height/1.3);
+    hedgehogXPosition = 1;
+  }
   
-  for(int i = 0; i < 4; i++)
-    image(tree[i], width/50, height/50);
-    
-  for(int i = 4; i < 8; i++)
-    image(tree[i], width/2.7, height/50);
-    
-  for(int i = 8; i < 12; i++)
-    image(tree[i], width/1.4, height/50);
-    
 }
